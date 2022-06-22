@@ -4,7 +4,8 @@ import { useState } from 'react';
 import Layout from '../components/layout';
 
 export default function App({ Component, pageProps }) {
-  const [count, setCount] = useState(0);
+  const [isDark, setDarkmode] = useState(false);
+  const toggleDarkmode = () => setDarkmode(!isDark);
 
   return (
     <Layout toggleDarkmode={toggleDarkmode} isDark={isDark}>
